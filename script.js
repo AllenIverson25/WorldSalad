@@ -14,9 +14,9 @@ let time = prompt('Enter a time?')
 let adjective4 = prompt('Enter last adjective dont worry?')
 
 
-let myStory = `The sun was setting, and the stadium was packed. The mile race was about to begin, and ${name1} was feeling ${emotion}. As the starting gun went off, ${name1} surged ahead, cutting through the ${adjective} air. The first lap felt smooth, but soon the competition was breathing down their neck.
-On the second lap, ${name1} saw ${name2} pushing hard, their strides looking ${adjective2}, but ${name1} wasn’t backing down. They could hear the crowd yelling “${exclamation}!” as they rounded the turn. With a burst of energy, ${name1} ${verb} past a ${adjective3} opponent, determined to take the lead.
-The final lap was intense. Every step felt like they were running through ${noun}, but ${name1} pushed harder, ignoring the burning in their legs. As they crossed the finish line in a blazing ${time}, the crowd went crazy. ${name1} had done it—they were the ${adjective4} champion of the mile!`
+let myStory = `The sun was setting, and the stadium was packed. The mile race was about to begin, and <b>${name1}</b> was feeling <b>${emotion}</b>. As the starting gun went off, <b>${name1}</b> surged ahead, cutting through the <b>${adjective}</b> air. The first lap felt smooth, but soon the competition was breathing down their neck.
+On the second lap, <b>${name1}</b> saw <b>${name2}</b> pushing hard, their strides looking <b>${adjective2}</b>, but <b>${name1}</b> wasn’t backing down. They could hear the crowd yelling “<b>${exclamation}</b>!” as they rounded the turn. With a burst of energy, <b>${name1}</b> <b>${verb}</b> past a <b>${adjective3}</b> opponent, determined to take the lead.
+The final lap was intense. Every step felt like they were running through <b>${noun}</b>, but <b>${name1}</b> pushed harder, ignoring the burning in their legs. As they crossed the finish line in a blazing <b>${time}</b>, the crowd went crazy. <b>${name1}</b> had done it—they were the <b>${adjective4}</b> champion of the mile!`
 console.log(myStory)
 
 document.getElementById('story').innerHTML = myStory;
