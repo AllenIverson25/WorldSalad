@@ -71,12 +71,7 @@ background: linear-gradient(to right, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, F
 *::after {
   box-sizing: border-box;
 }
-body {
-  background-color: #324968;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-}
+
 
 .main {
   margin: 0 auto;
@@ -165,18 +160,3 @@ body {
   text-shadow: black 3px 0px 6px;
 }
 
-#item_fig .card:after {
-  content: "Seasonal";
-  font-family: "Raleway", sans-serif;
-  color: rgba(234, 225, 175, 0.8);
-  font-weight: 600;
-  // font-style: italic;
-  text-transform: uppercase;
-  display: block;
-  width: 10ch;
-  height: 1.5em;
-  padding: 0.2em 0.4em;
-  position: relative;
-  bottom: calc(100% - 2.5em);
-  left: 1em;
-}
