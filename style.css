@@ -160,3 +160,7 @@ background: linear-gradient(to right, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, F
   text-shadow: black 3px 0px 6px;
 }
 
+.bold {
+  color: purple;
+  font-size: 20px;
+}

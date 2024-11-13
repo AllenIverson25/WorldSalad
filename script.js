@@ -1,6 +1,8 @@
 function generateStory() {
-    document.getElementById('generateButton').classList.add('hidden');
-
+    document.getElementById('generateButton').addEventListener('click', function() {
+        this.classList.add('hidden');
+      });
+      
     let name1 = prompt('Enter A Name?');
     let emotion = prompt('Enter an emotion?');
     let adjective = prompt('Enter an adjective?');
@@ -13,11 +15,11 @@ function generateStory() {
     let time = prompt('Enter a time?');
     let adjective4 = prompt('Enter last adjective, don\'t worry?');
 
-    let myStory = `The sun was setting, and the stadium was packed. The mile race was about to begin, and <b>${name1}</b> was feeling <b>${emotion}</b>. As the starting gun went off, <b>${name1}</b> surged ahead, cutting through the <b>${adjective}</b> air. The first lap felt smooth, but soon the competition was breathing down their neck.`;
+    let myStory = `The sun was setting, and the stadium was packed. The mile race was about to begin, and <span class="bold">${name1}</span> was feeling <span class="bold">${emotion}</span>. As the starting gun went off, <span class="bold">${name1}</span> surged ahead, cutting through the <span class="bold">${adjective}</span> air. The first lap felt smooth, but soon the competition was breathing down their neck.`;
 
-    let myStoryOne = `On the second lap, <b>${name1}</b> saw <b>${name2}</b> pushing hard, their strides looking <b>${adjective2}</b>, but <b>${name1}</b> wasn’t backing down. They could hear the crowd yelling “<b>${exclamation}</b>!” as they rounded the turn. With a burst of energy, <b>${name1}</b> <b>${verb}</b> past a <b>${adjective3}</b> opponent, determined to take the lead.`;
+    let myStoryOne = `On the second lap, <span class="bold">${name1}</span> saw <span class="bold">${name2}</span> pushing hard, their strides looking <span class="bold">${adjective2}</span>, but <span class="bold">${name1}</span> wasn’t backing down. They could hear the crowd yelling “<span class="bold">${exclamation}</span>!” as they rounded the turn. With a burst of energy, <span class="bold">${name1}</span> <span class="bold">${verb}</span> past a <span class="bold">${adjective3}</span> opponent, determined to take the lead.`;
 
-    let myStoryTwo = `The final lap was intense. Every step felt like they were running through a <b>${noun}</b>, but <b>${name1}</b> pushed harder, ignoring the burning in their legs. As they crossed the finish line in a blazing <b>${time}</b>, the crowd went crazy. <b>${name1}</b> had done it—they were the <b>${adjective4}</b> champion of the mile!`;
+    let myStoryTwo = `The final lap was intense. Every step felt like they were running through a <span class="bold">${noun}</span>, but <span class="bold">${name1}</span> pushed harder, ignoring the burning in their legs. As they crossed the finish line in a blazing <span class="bold">${time}</span>, the crowd went crazy. <span class="bold">${name1}</span> had done it—they were the <span class="bold">${adjective4}</span> champion of the mile!`;
 
     document.getElementById('story').innerHTML = myStory;
     document.getElementById('story1').innerHTML = myStoryOne;
