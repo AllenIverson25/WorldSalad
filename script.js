@@ -1,7 +1,6 @@
 function generateStory() {
-    document.getElementById('generateButton').addEventListener('click', function() {
-        this.classList.add('hidden');
-      });
+
+      
       
     let name1 = prompt('Enter A Name?');
     let emotion = prompt('Enter an emotion?');
@@ -24,4 +23,6 @@ function generateStory() {
     document.getElementById('story').innerHTML = myStory;
     document.getElementById('story1').innerHTML = myStoryOne;
     document.getElementById('story2').innerHTML = myStoryTwo;
+
+    document.getElementById('generateButton').classList.add('hidden');
 }
