@@ -164,3 +164,34 @@ background: linear-gradient(to right, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, F
   color: purple;
   font-size: 20px;
 }
+/* Entire scrollbar */
+::-webkit-scrollbar {
+  width: 16px; /* Wider scrollbar */
+  height: 16px; /* For horizontal scrollbars */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #ffd9a8, #ffe9d6); /* Sunset-themed pastel gradient */
+  border-radius: 10px; /* Smooth rounded track */
+  border: 2px solid #fff5e6; /* White border to give a clean look */
+}
+
+/* Scrollbar thumb (scroll handle) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7e5f, #feb47b); /* Vibrant sunset gradient */
+  border-radius: 10px; /* Fully rounded */
+  border: 4px solid #ffe9d6; /* Adds spacing around thumb */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for a polished effect */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e0565b, #ff9472); /* Darker gradient for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+/* Optional: Horizontal scrollbar customization */
+::-webkit-scrollbar-horizontal {
+  height: 16px;
+}
