@@ -35,51 +35,67 @@
              <button class=" btn d-flex align-items-center justify-content-center text-center d-grid fs-2"   id="generateButton" onclick="generateStory()">Click here to generate your story<span></span></button>
             </div>
              <div class="main">
-              
-                <ul class="cards">
-                  <li class="cards_item" id="item_salad">
-                    <div class="card">
-                     
-                      <div class="card_image"><img src="imgs/start.png" alt="mixed vegetable salad in a mason jar. "></div>
-                      <div class="card_content">
-                        <h2 class="card_title">Start of the Race</h2>
-                        <div class="card_text">
-                          <p id="story">
-                             </p>
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <li class="cards_item" id="item_salad">
+                      <div class="card">
+                       
+                        <div class="card_image"><img src="imgs/start.png" alt="mixed vegetable salad in a mason jar. "></div>
+                        <div class="card_content">
+                          <h2 class="card_title">Start of the Race</h2>
+                          <div class="card_text">
+                            <p id="story">
+                               </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-              
-                  <li class="cards_item" id="item_reuben">
-                    <div class="card">
-                  
-                      <div class="card_image"><img src="imgs/middlegood.webp" alt="middle. "></div>
-                      <div class="card_content">
-                        <h2 class="card_title">Middle of the race</h2>
-                        <div class="card_text">
-                          <p id="story1">
-
-                          </p>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cards_item" id="item_fig">
-                    <div class="card">
+                    </li>
+                  </div>
+                  <div class="carousel-item">
+                    <li class="cards_item" id="item_reuben">
+                      <div class="card">
                     
-                      <div class="card_image"><img src="imgs/finish.png" alt="A side view of a plate of figs and berries. "></div>
-                      <div class="card_content">
-                        <h2 class="card_title">End of the race</h2>
-                        <div class="card_text">
-                          <p id="story2">
-
-                          </p>
+                        <div class="card_image"><img src="imgs/middlegood.webp" alt="middle. "></div>
+                        <div class="card_content">
+                          <h2 class="card_title">Middle of the race</h2>
+                          <div class="card_text">
+                            <p id="story1">
+  
+                            </p>
+                            
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
+                  </div>
+                  <div class="carousel-item">
+                    <li class="cards_item" id="item_fig">
+                      <div class="card">
+                      
+                        <div class="card_image"><img src="imgs/finish.png" alt="A side view of a plate of figs and berries. "></div>
+                        <div class="card_content">
+                          <h2 class="card_title">End of the race</h2>
+                          <div class="card_text">
+                            <p id="story2">
+  
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+                
                 </ul>
               </div>
            
