@@ -26,3 +26,23 @@ function generateStory() {
 
     document.getElementById('generateButton').classList.add('hidden');
 }
+
+// Wait for the page to fully load
+window.addEventListener('load', function() {
+    // Hide the loading screen after a deliberate delay
+    const loading = document.getElementById('loading');
+    const content = document.getElementById('content');
+  
+    // Add a longer delay (e.g., 3 seconds)
+    setTimeout(() => {
+      loading.style.transition = 'opacity 0.5s ease';
+      loading.style.opacity = 0;
+  
+      // Wait for transition to complete before removing the loading screen
+      setTimeout(() => {
+        loading.style.display = 'none';
+        content.style.display = 'block';
+      }, 500); // Match this duration to the fade-out transition
+    }, 3000); // Delay in milliseconds (3 seconds)
+  });
+  
