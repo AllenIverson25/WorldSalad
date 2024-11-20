@@ -209,7 +209,7 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Sunset gradient */
+background: linear-gradient(159deg, rgba(65,105,225,1) 0%, rgba(137,207,240,1) 100%); 
   color: white;
   font-family: Arial, sans-serif;
   font-size: 50px;
