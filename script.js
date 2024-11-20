@@ -25,7 +25,10 @@ function generateStory() {
     document.getElementById('story2').innerHTML = myStoryTwo;
 
     document.getElementById('generateButton').classList.add('hidden');
+    document.getElementById('hide').classList.add('hidden');
+    document.getElementById('carouselExample').classList.remove('hidden');
 }
+
 
 // Wait for the page to fully load
 window.addEventListener('load', function() {
@@ -45,4 +48,5 @@ window.addEventListener('load', function() {
       }, 500); // Match this duration to the fade-out transition
     }, 3000); // Delay in milliseconds (3 seconds)
   });
+
   
