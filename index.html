@@ -2,43 +2,63 @@
 <html lang="en">
 
 <head>
+  <!-- Title of the webpage -->
   <title>World Salad</title>
-  <!-- Required meta tags -->
+
+  <!-- Required meta tags for character encoding and responsive design -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+  <!-- Link to external Typekit font -->
+  <link rel="stylesheet" href="https://use.typekit.net/jhb6gvd.css">
 
-  <!-- Bootstrap CSS v5.2.1 -->
+  <!-- Link to Bootstrap CSS for styling the webpage -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  
+  <!-- Link to custom CSS for additional styling -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Link to another external Typekit font -->
+  <link rel="stylesheet" href="https://use.typekit.net/iqa7ktx.css">
 </head>
 
 <body>
+  <!-- Header Section -->
   <header>
+    <!-- A "loading" text displayed while the page is being loaded -->
     <div class="font-monospace" id="loading">
       <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
     </div>
-    <h1 class="display-4 text-center">The Infamous 1 mile race</h1>
+    <!-- Main title of the page -->
+    <h1 class="display-1 text-center basic font-monospace">The Infamous 1 mile race</h1>
   </header>
+
+  <!-- Main content of the page -->
   <main class="container-fluid ">
     <div class="row">
       <div class="col-12">
-        <!-- The button to start the story generation -->
+        <!-- A button to trigger the story generation -->
         <center>
 
-
+          <!-- Carousel container for displaying the story steps -->
           <div class="main">
+            <!-- Carousel setup, initially hidden -->
             <div id="carouselExample" class="carousel slide hidden">
               <div class="carousel-inner">
+                <!-- Carousel item for the start of the race -->
                 <div class="carousel-item active">
                   <li class="cards_item" id="item_salad">
                     <div class="card">
 
-                      <div class="card_image"><img src="imgs/start.png" alt="mixed vegetable salad in a mason jar. ">
-                      </div>
+                      <!-- Image for the start of the race -->
+                      <div class="card_image"><img src="imgs/start.png" alt="mixed vegetable salad in a mason jar. "></div>
+                      
                       <div class="card_content">
+                        <!-- Title for the first step of the race -->
                         <h2 class="card_title">Start of the Race</h2>
                         <div class="card_text">
+                          <!-- Story text for the start of the race, initially empty -->
                           <p id="story">
                           </p>
                         </div>
@@ -46,34 +66,40 @@
                     </div>
                   </li>
                 </div>
+
+                <!-- Carousel item for the middle of the race -->
                 <div class="carousel-item">
                   <li class="cards_item" id="item_reuben">
                     <div class="card">
 
+                      <!-- Image for the middle of the race -->
                       <div class="card_image"><img src="imgs/middlegood.webp" alt="middle. "></div>
                       <div class="card_content">
+                        <!-- Title for the middle of the race -->
                         <h2 class="card_title">Middle of the race</h2>
                         <div class="card_text">
+                          <!-- Story text for the middle of the race, initially empty -->
                           <p id="story1">
-
                           </p>
-
                         </div>
                       </div>
                     </div>
                   </li>
                 </div>
+
+                <!-- Carousel item for the end of the race -->
                 <div class="carousel-item">
                   <li class="cards_item" id="item_fig">
                     <div class="card">
 
-                      <div class="card_image"><img src="imgs/finish.png"
-                          alt="A side view of a plate of figs and berries. "></div>
+                      <!-- Image for the end of the race -->
+                      <div class="card_image"><img src="imgs/finish.png" alt="A side view of a plate of figs and berries. "></div>
                       <div class="card_content">
+                        <!-- Title for the end of the race -->
                         <h2 class="card_title">End of the race</h2>
                         <div class="card_text">
+                          <!-- Story text for the end of the race, initially empty -->
                           <p id="story2">
-
                           </p>
                         </div>
                       </div>
@@ -81,13 +107,13 @@
                   </li>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                data-bs-slide="prev">
+
+              <!-- Carousel navigation buttons (previous and next) -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -96,22 +122,24 @@
             </ul>
           </div>
 
-          <div class="d-flex align-items-center justify-content-center square" id="hide">
+          <!-- Button for generating the story with some custom styling -->
+          <div class="d-flex align-items-center justify-content-center square m-3" id="hide">
+            <button class="btn border border-white border-2 w-100 h-100 glowing-btn" id="generateButton" onclick="generateStory()">
+              <span class="glowing-txt display-4">Click here to generate your story</span>
+            </button>
+          </div>
 
-                     
-            <button class="btn border border-white border-2 w-100 h-100 glowing-btn"   id="generateButton" onclick="generateStory()"><span class="glowing-txt display-4">Click here to generate your story</span></button>
-            
-           </div>
+        </center>
       </div>
     </div>
-    </center>
-
-
   </main>
+
+  <!-- Footer Section -->
   <footer>
-    <!-- place footer here -->
+    <!-- Footer content can be added here -->
   </footer>
-  <!-- Bootstrap JavaScript Libraries -->
+
+  <!-- Bootstrap JavaScript libraries for functionality -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
@@ -119,7 +147,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
+
+  <!-- Link to the external custom script file -->
   <script src="script.js"></script>
+  
+  <!-- Link to an additional UI kit for extra functionality -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"></script>
 </body>
 

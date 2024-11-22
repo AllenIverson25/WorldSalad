@@ -1,202 +1,236 @@
+/* Hides elements with this class */
 .hidden{
-    display: none !important;
+  display: none !important;
 }
 
+/* Defines a square element with specific height, width, and cursor effects */
 .square {
-  height: 90vh;
-  width: 90vw;
+height: 80vh; /* Set height to 80% of the viewport height */
+width: 80vw; /* Set width to 80% of the viewport width */
+cursor: pointer; /* Changes the cursor to a pointer when hovering */
+transition: 0.25s ease-in-out; /* Smooth transition effect for transformations */
 }
 
+/* Hover effect for the square element, slightly enlarges it */
+.square:hover{
+transform: scale(1.05); /* Increase size by 5% on hover */
+}
+
+/* Background styling for the body */
 body{
-  background: #3D7EAA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFE47A, #3D7EAA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+background: rgb(30,144,255); /* Fallback solid color */
+background: linear-gradient(159deg, rgba(30,144,255,1) 0%, rgba(153,186,221,1) 100%); /* Gradient from blue to light blue */
+background-repeat: no-repeat; /* Prevent repeating background image */
+background-attachment: fixed; /* Background fixed in place while scrolling */
 }
+
+/* Universal selector to apply box-sizing rule to all elements */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+box-sizing: border-box; /* Ensures padding and borders are included in width and height calculations */
 }
 
-
+/* Centers the .main element horizontally */
 .main {
-  margin: 0 auto;
+margin: 0 auto; /* Centering with automatic margins */
 }
 
+/* Styles for the cards container */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+display: flex; /* Use flexbox layout */
+flex-wrap: wrap; /* Allow wrapping of items */
+list-style: none; /* Remove default list styling */
+margin: 0;
+padding: 0;
 }
 
+/* Styles for each card item */
 .cards_item {
-  display: flex;
-  padding: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
+display: flex;
+padding: 1rem; /* Add padding around the card */
+max-width: 800px; /* Set maximum width */
+margin: 0 auto; /* Center the card item */
 }
 
+/* Styles for the card image */
 .card_image {
-  max-height: 450px;
-  margin-top: -24px;
-  img {
-    width: 100%;
-    max-width: 800px;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100px;
-    position: relative;
-    top: -100px;
-    background: linear-gradient(0deg, #091014 10%, rgba(0, 0, 0, 0) 100%);
-  }
+max-height: 450px; /* Limit the maximum height of the image */
+margin-top: -24px; /* Adjust the image positioning */
+img {
+  width: 100%; /* Image takes up full width */
+  max-width: 800px; /* Limit max width */
+  height: 100%; /* Image height fills the container */
+  object-fit: cover; /* Crop and fill the space while maintaining aspect ratio */
 }
 
-.card {
-  background-color: #091014;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card_content {
-  padding: 1rem;
-  z-index: 1;
+/* Gradient overlay effect for the image */
+&:after {
+  content: "";
   display: block;
-}
-
-.card_title {
-  font-family: 'Lobster', cursive;
-  font-size: 72px;
-  line-height: 72px;
-  margin-top: -50px;
-  margin-bottom: 24px;
-  text-shadow: black 1px 0 15px;
-  color: white;
-}
-
-.card_text {
-  color: #DDDACB;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 200;
-  p {
-    max-width: 700px;
-  }
-}
-
-.card_price {
-  position: relative;
-  top: 10px;
-  right: 16px;
-  text-align: right;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  height: 24px;
-  font-size: 36px;
-  font-weight: 400;
-  text-shadow: black 3px 0px 6px;
-}
-
-.bold {
-  color: purple;
-  font-size: 20px;
-}
-/* Entire scrollbar */
-::-webkit-scrollbar {
-  width: 16px; /* Wider scrollbar */
-  height: 16px; /* For horizontal scrollbars */
-}
-
-/* Scrollbar track (background) */
-::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #ffd9a8, #ffe9d6); /* Sunset-themed pastel gradient */
-  border-radius: 10px; /* Smooth rounded track */
-  border: 2px solid #fff5e6; /* White border to give a clean look */
-}
-
-/* Scrollbar thumb (scroll handle) */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff7e5f, #feb47b); /* Vibrant sunset gradient */
-  border-radius: 10px; /* Fully rounded */
-  border: 4px solid #ffe9d6; /* Adds spacing around thumb */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for a polished effect */
-}
-
-/* Scrollbar thumb on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #e0565b, #ff9472); /* Darker gradient for hover effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
-}
-
-/* Optional: Horizontal scrollbar customization */
-::-webkit-scrollbar-horizontal {
-  height: 16px;
-}
-/* Basic Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-
-}
-
-/* Loading Screen Styles */
-#loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-background: linear-gradient(159deg, rgba(65,105,225,1) 0%, rgba(137,207,240,1) 100%); 
-  color: white;
-  font-family: Arial, sans-serif;
-  font-size: 50px;
-  letter-spacing: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 9999;
+  height: 100px;
+  position: relative;
+  top: -100px;
+  background: linear-gradient(0deg, #091014 10%, rgba(0, 0, 0, 0) 100%);
+}
 }
 
-/* Text Animation */
+/* General card styling */
+.card {
+background-color: #091014; /* Dark background color */
+border-radius: 0.25rem; /* Rounded corners */
+box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); /* Shadow effect */
+display: flex;
+flex-direction: column; /* Stack child elements vertically */
+overflow: hidden; /* Hide any overflow content */
+}
+
+/* Content area inside the card */
+.card_content {
+padding: 1rem; /* Add padding around content */
+z-index: 1; /* Ensure the content is above other elements */
+display: block;
+}
+
+/* Title styling inside the card */
+.card_title {
+font-family: 'Lobster', cursive; /* Custom cursive font */
+font-size: 72px; /* Large font size */
+line-height: 72px; /* Match line height to font size */
+margin-top: -50px; /* Adjust top margin */
+margin-bottom: 24px; /* Add space below the title */
+text-shadow: black 1px 0 15px; /* Add shadow to text for a glowing effect */
+color: white; /* White text color */
+}
+
+/* Text styling inside the card */
+.card_text {
+color: #DDDACB; /* Light cream color */
+font-family: 'Raleway', sans-serif; /* Font style */
+font-weight: 200; /* Lighter font weight */
+p {
+  max-width: 700px; /* Limit the width of paragraphs */
+}
+}
+
+/* Price styling within the card (if used) */
+.card_price {
+position: relative;
+top: 10px;
+right: 16px;
+text-align: right; /* Align text to the right */
+color: white; /* White text color */
+font-family: "Raleway", sans-serif; /* Font style */
+height: 24px;
+font-size: 36px; /* Large font size */
+font-weight: 400; /* Regular font weight */
+text-shadow: black 3px 0px 6px; /* Shadow effect for text */
+}
+
+/* Bold text styling */
+.bold {
+color: #2066fd; /* Blue color for bold text */
+font-size: 20px; /* Slightly larger font size */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+width: 16px; /* Wider scrollbar */
+height: 16px; /* For horizontal scrollbars */
+}
+
+/* Scrollbar track (background) styling */
+::-webkit-scrollbar-track {
+background: linear-gradient(180deg, #ffd9a8, #ffe9d6); /* Sunset-themed pastel gradient */
+border-radius: 10px; /* Smooth rounded track */
+border: 2px solid #fff5e6; /* White border around the scrollbar */
+}
+
+/* Scrollbar thumb (handle) styling */
+::-webkit-scrollbar-thumb {
+background: linear-gradient(180deg, #ff7e5f, #feb47b); /* Sunset gradient */
+border-radius: 10px; /* Fully rounded thumb */
+border: 4px solid #ffe9d6; /* Adds space around thumb */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Scrollbar thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+background: linear-gradient(180deg, #e0565b, #ff9472); /* Darker gradient on hover */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
+}
+
+/* Optional: Horizontal scrollbar styling */
+::-webkit-scrollbar-horizontal {
+height: 16px; /* Adjust height for horizontal scrollbar */
+}
+
+/* Basic reset to remove margin and padding */
+body, html {
+margin: 0;
+padding: 0;
+height: 100%; /* Full height of the page */
+}
+
+/* Loading screen styles */
+#loading {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh; /* Full viewport height */
+background: linear-gradient(159deg, rgba(65,105,225,1) 0%, rgba(137,207,240,1) 100%); /* Gradient background */
+color: white; /* White text color */
+font-family: Arial, sans-serif; /* Font style */
+font-size: 50px; /* Large font size */
+letter-spacing: 10px; /* Space between letters */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%; /* Full width */
+z-index: 9999; /* Ensure loading text is on top */
+}
+
+/* Bounce animation for the loading text */
 #loading span {
-  display: inline-block;
-  animation: bounce 1.7s infinite;
+display: inline-block;
+animation: bounce 1.7s infinite; /* Bouncing animation */
 }
 
+/* Animation delay for the second and third spans */
 #loading span:nth-child(2) {
-  animation-delay: 0s;
+animation-delay: 0s;
 }
 
 #loading span:nth-child(3) {
-  animation-delay: 0s;
+animation-delay: 0s;
 }
 
+/* Keyframes for the bouncing animation */
 @keyframes bounce {
-  0%, 80%, 100% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(1.5);
-  }
+0%, 80%, 100% {
+  transform: scale(1); /* Normal scale at start, 80%, and end */
+}
+40% {
+  transform: scale(1.5); /* Grow to 1.5x size at 40% of animation */
+}
 }
 
-/* Main Content */
+/* Main content area, hidden initially */
 #content {
-  display: none; /* Hidden initially */
-  font-family: Arial, sans-serif;
-  padding: 20px;
+display: none; /* Hidden by default */
+font-family: Arial, sans-serif; /* Font style */
+padding: 20px; /* Padding for content */
 }
+
+/* Body styling once the page has loaded */
 body.loaded {
-  overflow: auto; /* Restore scrolling once the loading is complete */
+overflow: auto; /* Enable scrolling once loading is complete */
+}
+
+/* Basic font styling for the "basic" class */
+.basic{
+font-family: "turnip", serif; /* Use a custom serif font */
+font-weight: 400; /* Regular font weight */
+font-style: normal; /* Normal font style */
 }
